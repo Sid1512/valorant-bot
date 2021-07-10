@@ -1,0 +1,255 @@
+{
+  "tier": 
+  [
+    {
+      "tier": 0,
+      "tierName": "UNRANKED",
+      "color": "ffffff",
+      "divisionName": "UNRANKED",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/0/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/0/largeicon.png",
+      "rankup": null,
+      "rankdown": null
+    },
+    {
+      "tier": 1,
+      "tierName": "Unused1",
+      "divisionName": "Unused1",
+      "color": "ffffff",
+      "smallIcon": null,
+      "largeIcon": null,
+      "rankup": null,
+      "rankdown": null
+    },
+    {
+      "tier": 2,
+      "tierName": "Unused2",
+      "divisionName": "Unused2",
+      "color": "ffffff",
+      "smallIcon": null,
+      "largeIcon": null,
+      "rankup": null,
+      "rankdown": null
+    },
+    {
+      "tier": 3,
+      "tierName": "IRON 1",
+      "divisionName": "IRON",
+      "color": "3d3d3d",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/3/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/3/largeicon.png",
+      "rankup": "<:ironup:861307057734156329>",
+      "rankdown": "<:irondown:861307058372739083>"
+    },
+    {
+      "tier": 4,
+      "tierName": "IRON 2",
+      "divisionName": "IRON",
+      "color": "3d3d3d",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/4/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/4/largeicon.png",
+      "rankup": "<:ironup:861307057734156329>",
+      "rankdown": "<:irondown:861307058372739083>"
+    },
+    {
+      "tier": 5,
+      "tierName": "IRON 3",
+      "divisionName": "IRON",
+      "color": "3d3d3d",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/5/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/5/largeicon.png",
+      "rankup": "<:ironup:861307057734156329>",
+      "rankdown": "<:irondown:861307058372739083>"
+    },
+    {
+      "tier": 6,
+      "tierName": "BRONZE 1",
+      "divisionName": "BRONZE",
+      "color": "5f3b1b",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/6/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/6/largeicon.png",
+      "rankup": "<:bronzeup:861307057842683954>",
+      "rankdown": "<:bronzedown:861307057743724544>"
+    },
+    {
+      "tier": 7,
+      "tierName": "BRONZE 2",
+      "divisionName": "BRONZE",
+      "color": "5f3b1b",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/7/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/7/largeicon.png",
+      "rankup": "<:bronzeup:861307057842683954>",
+      "rankdown": "<:bronzedown:861307057743724544>"
+    },
+    {
+      "tier": 8,
+      "tierName": "BRONZE 3",
+      "divisionName": "BRONZE",
+      "color": "5f3b1b",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/8/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/8/largeicon.png",
+      "rankup": "<:bronzeup:861307057842683954>",
+      "rankdown": "<:bronzedown:861307057743724544>"
+    },
+    {
+      "tier": 9,
+      "tierName": "SILVER 1",
+      "divisionName": "SILVER",
+      "color": "7e8989",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/9/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/9/largeicon.png",
+      "rankup": "<:silverup:861307057760239626>",
+      "rankdown": "<:silverdown:861307058338529280>"
+    },
+    {
+      "tier": 10,
+      "tierName": "SILVER 2",
+      "divisionName": "SILVER",
+      "color": "7e8989",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/10/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/10/largeicon.png",
+      "rankup": "<:silverup:861307057760239626>",
+      "rankdown": "<:silverdown:861307058338529280>"
+    },
+    {
+      "tier": 11,
+      "tierName": "SILVER 3",
+      "divisionName": "SILVER",
+      "color": "7e8989",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/11/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/11/largeicon.png",
+      "rankup": "<:silverup:861307057760239626>",
+      "rankdown": "<:silverdown:861307058338529280>"
+    },
+    {
+      "tier": 12,
+      "tierName": "GOLD 1",
+      "divisionName": "GOLD",
+      "color": "d69e18",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/12/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/12/largeicon.png",
+      "rankup": "<:goldup:861307059169394728>",
+      "rankdown": "<:golddown:861307058045321306>"
+    },
+    {
+      "tier": 13,
+      "tierName": "GOLD 2",
+      "divisionName": "GOLD",
+      "color": "d69e18",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/13/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/13/largeicon.png",
+      "rankup": "<:goldup:861307059169394728>",
+      "rankdown": "<:golddown:861307058045321306>"
+    },
+    {
+      "tier": 14,
+      "tierName": "GOLD 3",
+      "divisionName": "GOLD",
+      "color": "d69e18",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/14/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/14/largeicon.png",
+      "rankup": "<:goldup:861307059169394728>",
+      "rankdown": "<:golddown:861307058045321306>"
+    },
+    {
+      "tier": 15,
+      "tierName": "PLATINUM 1",
+      "divisionName": "PLATINUM",
+      "color": "196577",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/15/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/15/largeicon.png",
+      "rankup": "<:platinumup:861307058368282645>",
+      "rankdown": "<:platinumdown:861307057969561630>"
+    },
+    {
+      "tier": 16,
+      "tierName": "PLATINUM 2",
+      "divisionName": "PLATINUM",
+      "color": "196577",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/16/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/16/largeicon.png",
+      "rankup": "<:platinumup:861307058368282645>",
+      "rankdown": "<:platinumdown:861307057969561630>"
+    },
+    {
+      "tier": 17,
+      "tierName": "PLATINUM 3",
+      "divisionName": "PLATINUM",
+      "color": "196577",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/17/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/17/largeicon.png",
+      "rankup": "<:platinumup:861307058368282645>",
+      "rankdown": "<:platinumdown:861307057969561630>"
+    },
+    {
+      "tier": 18,
+      "tierName": "DIAMOND 1",
+      "divisionName": "DIAMOND",
+      "color": "743f8c",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/18/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/18/largeicon.png",
+      "rankup": "<:diamondup:861307057725243443>",
+      "rankdown": "<:diamonddown:861307057695883264>"
+    },
+    {
+      "tier": 19,
+      "tierName": "DIAMOND 2",
+      "divisionName": "DIAMOND",
+      "rankemoji": 10,
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/19/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/19/largeicon.png",
+      "rankup": "<:diamondup:861307057725243443>",
+      "rankdown": "<:diamonddown:861307057695883264>"
+    },
+    {
+      "tier": 20,
+      "tierName": "DIAMOND 3",
+      "divisionName": "DIAMOND",
+      "color": "743f8c",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/20/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/20/largeicon.png",
+      "rankup": "<:diamondup:861307057725243443>",
+      "rankdown": "<:diamonddown:861307057695883264>"
+    },
+    {
+      "tier": 21,
+      "tierName": "IMMORTAL 1",
+      "divisionName": "IMMORTAL",
+      "color": "7e0c21",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/21/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/21/largeicon.png",
+      "rankup": "<:immortalup:861307057507532811>",
+      "rankdown": "<:immortaldown:861307057411981333>"
+    },
+    {
+      "tier": 22,
+      "tierName": "IMMORTAL 2",
+      "divisionName": "IMMORTAL",
+      "color": "7e0c21",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/22/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/22/largeicon.png",
+      "rankup": "<:immortalup:861307057507532811>",
+      "rankdown": "<:immortaldown:861307057411981333>"
+    },
+    {
+      "tier": 23,
+      "tierName": "IMMORTAL 3",
+      "divisionName": "IMMORTAL",
+      "color": "7e0c21",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/23/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/23/largeicon.png",
+      "rankup": "<:immortalup:861307057507532811>",
+      "rankdown": "<:immortaldown:861307057411981333>"
+    },
+    {
+      "tier": 24,
+      "tierName": "RADIANT",
+      "divisionName": "RADIANT",
+      "color": "ffff66",
+      "smallIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/24/smallicon.png",
+      "largeIcon": "https://media.valorant-api.com/competitivetiers/edb72a72-7e6d-6010-9591-7c053bbdbf48/24/largeicon.png",
+      "rankup": "<:radiantup:861307057780031519>",
+      "rankdown": "<:radiantdown:861307058045190144>"
+    }
+  ]
+}
