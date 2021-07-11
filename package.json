@@ -1,0 +1,26 @@
+{
+  "name": "valorant-bot",
+  "version": "1.0.0",
+  "description": "Unofficial Valorant Bot currently used to show player rank data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sid1512/valorant-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sid1512/valorant-bot/issues"
+  },
+  "homepage": "https://github.com/Sid1512/valorant-bot#readme"
+}
