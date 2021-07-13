@@ -8,7 +8,7 @@ agents = JSON.parse(agents)
 function info (message, number) {
   const agentEmbed = new MessageEmbed()
     .setColor('#ffffff')
-    .setAuthor('Valorant Bot', 'https://static.wikia.nocookie.net/valorant_esports_gamepedia_en/images/d/d9/Logo_square.png/revision/latest?cb=20200404214157')
+    .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
     .setTitle(agents.agent[number].name)
     .setThumbnail(agents.agent[number].avatar)
     .setDescription(agents.agent[number].bio)
