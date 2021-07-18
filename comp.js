@@ -36,16 +36,16 @@ async function comp (message, username, user, tag) {
                   break
                 }
               }
-              const red = `${(game.players.red[0].character).padEnd(9) + ' ' + tiers.tier[game.players.red[0].currenttier].rankIcon}
-              ${(game.players.red[1].character).padEnd(9) + ' ' + tiers.tier[game.players.red[1].currenttier].rankIcon}
-              ${(game.players.red[2].character).padEnd(9) + ' ' + tiers.tier[game.players.red[2].currenttier].rankIcon}
-              ${(game.players.red[3].character).padEnd(9) + ' ' + tiers.tier[game.players.red[3].currenttier].rankIcon}
-              ${(game.players.red[4].character).padEnd(9) + ' ' + tiers.tier[game.players.red[4].currenttier].rankIcon}`
-              const blue = `${(game.players.blue[0].character).padEnd(9) + ' ' + tiers.tier[game.players.blue[0].currenttier].rankIcon}
-              ${(game.players.blue[1].character).padEnd(9) + ' ' + tiers.tier[game.players.blue[1].currenttier].rankIcon}
-              ${(game.players.blue[2].character).padEnd(9) + ' ' + tiers.tier[game.players.blue[2].currenttier].rankIcon}
-              ${(game.players.blue[3].character).padEnd(9) + ' ' + tiers.tier[game.players.blue[3].currenttier].rankIcon}
-              ${(game.players.blue[4].character).padEnd(9) + ' ' + tiers.tier[game.players.blue[4].currenttier].rankIcon}`
+              const red = `${(game.players.red[0].character) + ' ' + tiers.tier[game.players.red[0].currenttier].rankIcon}
+              ${game.players.red[1].character + ' ' + tiers.tier[game.players.red[1].currenttier].rankIcon}
+              ${game.players.red[2].character + ' ' + tiers.tier[game.players.red[2].currenttier].rankIcon}
+              ${game.players.red[3].character + ' ' + tiers.tier[game.players.red[3].currenttier].rankIcon}
+              ${game.players.red[4].character + ' ' + tiers.tier[game.players.red[4].currenttier].rankIcon}`
+              const blue = `${(game.players.blue[0].character) + ' ' + tiers.tier[game.players.blue[0].currenttier].rankIcon}
+              ${game.players.blue[1].character + ' ' + tiers.tier[game.players.blue[1].currenttier].rankIcon}
+              ${game.players.blue[2].character + ' ' + tiers.tier[game.players.blue[2].currenttier].rankIcon}
+              ${game.players.blue[3].character + ' ' + tiers.tier[game.players.blue[3].currenttier].rankIcon}
+              ${game.players.blue[4].character + ' ' + tiers.tier[game.players.blue[4].currenttier].rankIcon}`
               const sb =
               `╔══════════════════╦════════╦══════════════════╦════════╗
 ║${('Red Team' + teamwin[0][1]).padEnd(18)}║${('K/D/A').padEnd(8)}║${('Blue Team' + teamwin[1][1]).padEnd(18)}║${('K/D/A').padEnd(8)}║
