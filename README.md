@@ -13,7 +13,11 @@ Example: ?rank CodeHacker#noob
 
 ?rankprev <br />
 Shows your rank data for all the previous episodes. <br />
-Format: Just change ?rank to ?rankprev
+Format: ?rankprev Username#Tag
+
+?comp <br />
+Show information of your latest competitive game. <br />
+Format: ?comp Username#Tag
 
 ?agents <br />
 Show list of agents.
