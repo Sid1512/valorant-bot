@@ -31,7 +31,7 @@ async function comp (message, username, user, tag) {
                 teamwin[1][1] = ' (Winner)'
               }
               for (const player of game.players.all_players) {
-                if (player.name + player.tag === user + tag) {
+                if ((player.name + player.tag).toLowerCase() === (user + tag).toLowerCase()) {
                   playerAgentTeam = player.team + ' & ' + player.character
                   break
                 }
@@ -77,7 +77,7 @@ async function comp (message, username, user, tag) {
     })
   }
   if (check !== 0) {
-    message.channel.send('No competitve game found / User not found!\nIf you think there is error try again!')
+    message.channel.send('No competitve game found / User not found!\nIf you think there is error try again!\nFor some accounts details wont be visible. (Working on it)')
   }
 }
 module.exports = {
