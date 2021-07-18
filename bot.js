@@ -33,7 +33,7 @@ client.on('message', async (message) => {
           .addField('\u200B\nCurrently Supported Commands', '** **')
           .addField('?rank', 'Shows your current act rank data.\nFormat: ?rank Username#Tag\nExample: ?rank CodeHacker#noob')
           .addField('?rankprev', 'Shows your rank data for all the previous episodes.\nFormat: ?rankprev Username#Tag')
-          .addField('?comp', 'Show information of your latest competitive game.\nFormat: ?comp Username#Tag\nIssues: For some accounts details wont be visible. (Working on it)')
+          .addField('?comp', 'Show information of your latest competitive game.\nFormat: ?comp Username#Tag\n')
           .addField('?agents', 'Show list of agents.')
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
           .addField('\u200B\nGithub', 'https://github.com/Sid1512/valorant-bot\nIf you like the bot pls star it and follow me! :heart:')

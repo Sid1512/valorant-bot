@@ -77,7 +77,7 @@ async function comp (message, username, user, tag) {
     })
   }
   if (check !== 0) {
-    message.channel.send('No competitve game found / User not found!\nIf you think there is error try again!\nFor some accounts details wont be visible. (Working on it)')
+    message.channel.send('Your last 5 game does not have any competitve mode./ User not found!\nIf you think there is error try again!')
   }
 }
 module.exports = {
