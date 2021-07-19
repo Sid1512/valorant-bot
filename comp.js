@@ -31,7 +31,7 @@ async function comp (message, username, user, tag) {
                 teamwin[1] = ' (Winner)'
               }
               for (const player of game.players.all_players) {
-                if ((player.name + player.tag).toLowerCase() === (user + tag).toLowerCase()) {
+                if (decodeURI((player.name + player.tag).toLowerCase()) === decodeURI((user + tag).toLowerCase())) {
                   playerAgentTeam = player.team + ' & ' + player.character
                   break
                 }
