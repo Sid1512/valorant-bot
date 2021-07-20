@@ -8,7 +8,7 @@ const PREFIX = '?'
 
 client.on('ready', () => {
   console.log(`${client.user.tag} has logged in`)
-  client.user.setActivity('type ?help to use me', { type: 'PLAYING' })
+  client.user.setActivity(`in ${client.guilds.cache.size} Servers | ?help`, { type: 'PLAYING' })
 })
 
 client.on('message', async (message) => {
