@@ -15,6 +15,7 @@ const region = ['ap', 'eu', 'na', 'kr']
 
 async function stats (message, code, username, user, tag) {
   let check = -1
+  let errorMessage
   for (const r of region) {
     await fetch('https://api.henrikdev.xyz/valorant/v2/mmr/' + r + '/' + user + '/' + tag + '?filter=').then(res => {
       if (res.status === 200) {
@@ -61,11 +62,20 @@ async function stats (message, code, username, user, tag) {
             }
           }
         })
+      } else {
+        errorMessage = res.status
       }
     })
   }
   if (check !== 0) {
-    message.channel.send('User not found!')
+    console.log(errorMessage)
+    if (errorMessage === 409) {
+      message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
+    } else if (errorMessage === 404) {
+      message.channel.send('User not found!')
+    } else {
+      message.channel.send('Your last 5 game does not have any competitve mode.\nIf you think there is error try again!')
+    }
   }
 }
 module.exports = {
