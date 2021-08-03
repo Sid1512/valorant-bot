@@ -2,6 +2,8 @@ require('dotenv').config()
 const rank = require('./rank.js')
 const agent = require('./agents.js')
 const { Client, MessageEmbed } = require('discord.js')
+const { matches } = require('./matches')
+const { match } = require('./match')
 const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
 const PREFIX = '?'
 
@@ -17,12 +19,17 @@ client.on('message', async (message) => {
   if (message.content.startsWith(PREFIX)) {
     const text = message.content.substring(PREFIX.length)
     let code = text.substring(0, text.length)
+    let matchno
     for (let i = 0; i < text.length; i++) {
       if (text.charAt(i) === ' ') {
         msg = text.substring(i + 1, text.length)
         code = text.substring(0, i)
         break
       }
+    }
+    if (code === 'match1' || code === 'match2' || code === 'match3' || code === 'match4' || code === 'match5') {
+      matchno = code.substring((code.length - 1), code.length)
+      code = code.substring(0, (code.length - 1))
     }
     switch (code) {
       case 'help': {
@@ -73,6 +80,22 @@ client.on('message', async (message) => {
         } else {
           message.channel.send('Enter valid agent number!')
         }
+        break
+      }
+      case 'matches': {
+        const username = msg
+        const [user, tag] = encodeURI(username).split('#')
+        console.log(user, tag)
+        console.log(msg)
+        matches(message, username, user, tag)
+        break
+      }
+      case 'match': {
+        const username = msg
+        const [user, tag] = encodeURI(username).split('#')
+        console.log(user, tag)
+        console.log(msg)
+        match(message, username, user, tag, matchno)
         break
       }
       case 'comp': {
