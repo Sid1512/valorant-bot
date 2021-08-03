@@ -2,7 +2,6 @@ require('dotenv').config()
 const rank = require('./rank.js')
 const agent = require('./agents.js')
 const { Client, MessageEmbed } = require('discord.js')
-const { comp } = require('./comp.js')
 const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
 const PREFIX = '?'
 
@@ -33,7 +32,8 @@ client.on('message', async (message) => {
           .addField('\u200B\nCurrently Supported Commands', '** **')
           .addField('?rank', 'Shows your current act rank data.\nFormat: ?rank Username#Tag\nExample: ?rank CodeHacker#noob')
           .addField('?rankprev', 'Shows your rank data for all the previous episodes.\nFormat: ?rankprev Username#Tag')
-          .addField('?comp', 'Show information of your latest competitive game.\nFormat: ?comp Username#Tag\n')
+          .addField('?matches', 'Show list of last 5 games.\nFormat: ?matches Username#Tag\n')
+          .addField('?match', 'Show information of your desired game.\nFormat: ?match1-5 Username#Tag\n')
           .addField('?agents', 'Show list of agents.')
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
           .addField('\u200B\nGithub', 'https://github.com/Sid1512/valorant-bot\nIf you like the bot pls star it and follow me! :heart:')
@@ -76,11 +76,8 @@ client.on('message', async (message) => {
         break
       }
       case 'comp': {
-        const username = msg
-        const [user, tag] = encodeURI(username).split('#')
-        console.log(user, tag)
-        console.log(msg)
-        comp(message, username, user, tag)
+        message.channel.send('Use ?match')
+        break
       }
     }
   }
