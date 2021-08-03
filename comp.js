@@ -20,8 +20,8 @@ async function comp (message, username, user, tag) {
       if (res.status === 200) {
         res.json().then(json => {
           for (const game of json.data) {
+            check++
             if (game.metadata.mode === 'Competitive') {
-              check = 0
               let setColor
               let playerAgentTeam
               if (game.teams.red.has_won) {
@@ -79,14 +79,15 @@ async function comp (message, username, user, tag) {
       }
     })
   }
-  if (check !== 0) {
+  console.log(check)
+  if (check > 0) {
+    message.channel.send('Your last 5 game does not have any competitve mode.\nIf you think there is error try again!')
+  } else if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
       message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
-    } else if (errorMessage === 404) {
-      message.channel.send('User not found!')
     } else {
-      message.channel.send('Your last 5 game does not have any competitve mode.\nIf you think there is error try again!')
+      message.channel.send('User not found!')
     }
   }
 }
