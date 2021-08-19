@@ -72,7 +72,7 @@ async function stats (message, code, username, user, tag) {
     if (errorMessage === 409) {
       message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
     } else {
-      message.channel.send('User not found!')
+      message.channel.send('User not found!\nTry again if you feel there is an error!')
     }
   }
 }

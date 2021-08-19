@@ -81,13 +81,13 @@ async function comp (message, username, user, tag) {
   }
   console.log(check)
   if (check > 0) {
-    message.channel.send('Your last 5 game does not have any competitve mode.\nIf you think there is error try again!')
+    message.channel.send('Your last 5 game does not have any competitve mode.\nTry again if you feel there is an error!')
   } else if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
       message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
     } else {
-      message.channel.send('User not found!')
+      message.channel.send('User not found!\nTry again if you feel there is an error!')
     }
   }
 }
