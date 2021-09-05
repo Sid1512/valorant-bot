@@ -23,6 +23,10 @@ async function match (message, username, user, tag, matchno) {
           for (const game of json.data) {
             if (check === matchno - 1) {
               if (game.metadata.mode !== 'Competitive' && game.metadata.mode !== 'Deathmatch') {
+                if (game.metadata.rounds_played === 1) {
+                  message.channel.send('Custom Deathmatch data feature will come soon!')
+                  break
+                }
                 let setColor
                 let playerAgentTeam
                 if (game.teams.red.has_won) {
@@ -134,7 +138,6 @@ async function match (message, username, user, tag, matchno) {
       }
     })
   }
-  console.log(check)
   if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {

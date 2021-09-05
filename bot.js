@@ -1,11 +1,12 @@
 require('dotenv').config()
 const rank = require('./rank.js')
 const agent = require('./agents.js')
-const { Client, MessageEmbed } = require('discord.js')
 const { matches } = require('./matches')
 const { match } = require('./match')
-const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
 const PREFIX = '?'
+
+const { Client, MessageEmbed } = require('discord.js')
+const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
 
 client.on('ready', () => {
   console.log(`${client.user.tag} has logged in`)

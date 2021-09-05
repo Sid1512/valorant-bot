@@ -40,7 +40,6 @@ async function matches (message, username, user, tag) {
       }
     })
   }
-  console.log(check)
   if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
