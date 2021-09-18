@@ -5,8 +5,11 @@ const { matches } = require('./matches')
 const { match } = require('./match')
 const PREFIX = '?'
 
+const { MessageButton } = require('discord-buttons')
 const { Client, MessageEmbed } = require('discord.js')
 const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
+
+require('discord-buttons')(client)
 
 client.on('ready', () => {
   console.log(`${client.user.tag} has logged in`)
@@ -34,6 +37,14 @@ client.on('message', async (message) => {
     }
     switch (code) {
       case 'help': {
+        const github = new MessageButton()
+          .setStyle('url')
+          .setLabel('Github')
+          .setURL('https://github.com/Sid1512/valorant-bot')
+        const invite = new MessageButton()
+          .setStyle('url')
+          .setLabel('Invite Link')
+          .setURL('https://discord.com/api/oauth2/authorize?client_id=856456488372535316&permissions=330752&scope=bot')
         const helpEmbed = new MessageEmbed()
           .setColor('#ffffff')
           .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
@@ -44,10 +55,12 @@ client.on('message', async (message) => {
           .addField('?match', 'Show information of your desired game.\nFormat: ?match1-5 Username#Tag\n')
           .addField('?agents', 'Show list of agents.')
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
-          .addField('\u200B\nGithub', 'https://github.com/Sid1512/valorant-bot\nIf you like the bot pls star it and follow me! :heart:')
-          .addField('\u200B\nInvite Link', 'https://discord.com/api/oauth2/authorize?client_id=856456488372535316&permissions=330752&scope=bot')
+          .addField('\u200B\nSupport me by', 'Recommend it to others using the invite link! :heart:\nStar my project on github and follow me! :star: :heart:')
           .setFooter('Bot by CodeHacker#9999', 'https://imgur.com/7av0vkX.png')
-        message.channel.send(helpEmbed)
+        message.channel.send({
+          buttons: [github, invite],
+          embed: helpEmbed
+        })
         break
       }
       case 'rank': {
