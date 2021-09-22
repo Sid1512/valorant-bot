@@ -62,7 +62,7 @@ async function comp (message, username, user, tag) {
                 .setColor(setColor)
                 .setTitle(username)
                 .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
-                .setFooter('Bot by CodeHacker#9999', 'https://imgur.com/7av0vkX.png')
+                .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
                 .addField('Map', game.metadata.map, true)
                 .addField('Played on', game.metadata.game_start_patched + ' (EST/EDT)', true)
                 .addField('Team & Agent', playerAgentTeam, true)

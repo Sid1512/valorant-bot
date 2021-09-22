@@ -27,7 +27,7 @@ async function matches (message, username, user, tag) {
             .setColor('#ffffff')
             .setTitle(username)
             .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
-            .setFooter('Bot by CodeHacker#9999', 'https://imgur.com/7av0vkX.png')
+            .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
             .addField('Last 5 Matches', gamemodes)
           message.channel.send(matches)
           client.on('message', async (message) => {

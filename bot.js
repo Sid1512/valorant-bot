@@ -56,7 +56,7 @@ client.on('message', async (message) => {
           .addField('?agents', 'Show list of agents.')
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
           .addField('\u200B\nSupport me by', 'Recommend it to others using the invite link! :heart:\nStar my project on github and follow me! :star: :heart:')
-          .setFooter('Bot by CodeHacker#9999', 'https://imgur.com/7av0vkX.png')
+          .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
         message.channel.send({
           buttons: [github, invite],
           embed: helpEmbed

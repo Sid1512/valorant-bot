@@ -39,7 +39,7 @@ async function stats (message, code, username, user, tag) {
                 .addField('MMR', playerData.current_data.ranking_in_tier + '/100', true)
                 .addField('ELO', playerData.current_data.elo, true)
                 .addField('Last Game MMR Change', rankemo + playerData.current_data.mmr_change_to_last_game, true)
-                .setFooter('Bot by CodeHacker#9999', 'https://imgur.com/7av0vkX.png')
+                .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
               message.channel.send(rankEmbed)
             } else {
               season.forEach(seas => {
