@@ -32,4 +32,4 @@ Format: ?agent number
 
 # Support
 
-If you have any questions write on Discord: CodeHacker#9999.
+[Bot Support Server](https://discord.gg/Qay5rMrKAb)
