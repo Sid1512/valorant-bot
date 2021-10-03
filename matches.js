@@ -1,7 +1,6 @@
 const fetch = require('node-fetch')
 
-const { Client, MessageEmbed } = require('discord.js')
-const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
+const { MessageEmbed } = require('discord.js')
 
 const region = ['ap', 'eu', 'na', 'kr']
 
@@ -19,7 +18,7 @@ async function matches (message, username, user, tag) {
               gamemodes = gamemodes + (check + 1) + '. ' + game.metadata.mode + ' (Coming Soon)\n'
               check++
             } else {
-              gamemodes = gamemodes + (check + 1) + '. ' + game.metadata.mode + '\n'
+              gamemodes = gamemodes + (check + 1) + '. ' + game.metadata.mode + ' | ' + game.metadata.map + '\n'
               check++
             }
           }
@@ -30,10 +29,6 @@ async function matches (message, username, user, tag) {
             .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
             .addField('Last 5 Matches', gamemodes)
           message.channel.send(matches)
-          client.on('message', async (message) => {
-            if (message.author.bot) return
-            console.log(message.content + 'rreer')
-          })
         })
       } else {
         errorMessage = res.status
