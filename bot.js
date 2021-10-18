@@ -1,8 +1,8 @@
 require('dotenv').config()
 const rank = require('./rank.js')
 const agent = require('./agents.js')
-const { matches } = require('./matches')
-const { match } = require('./match')
+// const { matches } = require('./matches')
+// const { match } = require('./match')
 const PREFIX = '?'
 
 const { MessageButton } = require('discord-buttons')
@@ -101,7 +101,8 @@ client.on('message', async (message) => {
         const [user, tag] = encodeURI(username).split('#')
         console.log(user, tag)
         console.log(msg)
-        matches(message, username, user, tag)
+        message.channel.send('Not working currently! Sorry!')
+        // matches(message, username, user, tag)
         break
       }
       case 'match': {
@@ -109,11 +110,9 @@ client.on('message', async (message) => {
         const [user, tag] = encodeURI(username).split('#')
         console.log(user, tag)
         console.log(msg)
-        match(message, username, user, tag, matchno)
-        break
-      }
-      case 'comp': {
-        message.channel.send('Use ?match')
+        console.log(matchno)
+        message.channel.send('Not working currently! Sorry!')
+        // match(message, username, user, tag, matchno)
         break
       }
     }
