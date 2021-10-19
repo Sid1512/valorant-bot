@@ -16,12 +16,12 @@ Shows your rank data for all the previous episodes. <br />
 Format: ?rankprev Username#Tag
 
 ?matches <br />
-Show list of last 5 games. <br />
+Show list of last 10 games. <br />
 Format: ?matches Username#Tag
 
 ?match <br />
 Show information of your desired game. <br />
-Format: ?match1-5 Username#Tag
+Format: ?match1-10 Username#Tag
 
 ?agents <br />
 Show list of agents.
