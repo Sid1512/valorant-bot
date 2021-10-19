@@ -31,7 +31,7 @@ client.on('message', async (message) => {
         break
       }
     }
-    if (code === 'match1' || code === 'match2' || code === 'match3' || code === 'match4' || code === 'match5') {
+    if (code === 'match1' || code === 'match2' || code === 'match3' || code === 'match4' || code === 'match5' || code === 'match6' || code === 'match7' || code === 'match8' || code === 'match9' || code === 'match10') {
       matchno = code.substring((code.length - 1), code.length)
       code = code.substring(0, (code.length - 1))
     }
@@ -51,8 +51,8 @@ client.on('message', async (message) => {
           .addField('\u200B\nCurrently Supported Commands', '** **')
           .addField('?rank', 'Shows your current act rank data.\nFormat: ?rank Username#Tag\nExample: ?rank CodeHacker#noob')
           .addField('?rankprev', 'Shows your rank data for all the previous episodes.\nFormat: ?rankprev Username#Tag')
-          .addField('?matches', 'Show list of last 5 games.\nFormat: ?matches Username#Tag\n')
-          .addField('?match', 'Show information of your desired game.\nFormat: ?match1-5 Username#Tag\n')
+          .addField('?matches', 'Show list of last 10 games.\nFormat: ?matches Username#Tag\n')
+          .addField('?match', 'Show information of your desired game.\nFormat: ?match1-10 Username#Tag\n')
           .addField('?agents', 'Show list of agents.')
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
           .addField('\u200B\nSupport me by', 'Recommend it to others using the invite link! :heart:\nStar my project on github and follow me! :star: :heart:')

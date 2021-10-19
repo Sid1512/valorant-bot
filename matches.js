@@ -8,7 +8,7 @@ async function matches (message, username, user, tag) {
   let check = -1
   let errorMessage
   for (const r of region) {
-    await fetch('http://api.henrikdev.xyz/valorant/v3/matches/' + r + '/' + user + '/' + tag).then(res => {
+    await fetch('http://api.henrikdev.xyz/valorant/v3/matches/' + r + '/' + user + '/' + tag + '?size=10').then(res => {
       if (res.status === 200) {
         check++
         res.json().then(json => {
@@ -27,7 +27,7 @@ async function matches (message, username, user, tag) {
             .setTitle(username)
             .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
             .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
-            .addField('Last 5 Matches', gamemodes)
+            .addField('Last 10 Matches', gamemodes)
           message.channel.send(matches)
         })
       } else {

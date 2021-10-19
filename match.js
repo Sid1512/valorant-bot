@@ -16,7 +16,7 @@ async function match (message, username, user, tag, matchno) {
   let check = -1
   let errorMessage
   for (const r of region) {
-    await fetch('http://api.henrikdev.xyz/valorant/v3/matches/' + r + '/' + user + '/' + tag).then(res => {
+    await fetch('http://api.henrikdev.xyz/valorant/v3/matches/' + r + '/' + user + '/' + tag + '?size=10').then(res => {
       if (res.status === 200) {
         check++
         res.json().then(json => {
