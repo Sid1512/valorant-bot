@@ -2,7 +2,8 @@
   "name": "valorant-bot",
   "version": "1.0.0",
   "engines": {
-    "node": "v16.11.1"
+    "node": "v16.11.1",
+    "npm": "8.1.0"
   },
   "description": "Unofficial Valorant Bot currently used to show player rank data.",
   "main": "index.js",
