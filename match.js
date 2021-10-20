@@ -1,11 +1,10 @@
-// API Fetch Module
 const fetch = require('node-fetch')
 
-// File Read Module
 const fs = require('fs')
 
-// Discord Js Modules
-const { MessageEmbed } = require('discord.js')
+const {
+  MessageEmbed
+} = require('discord.js')
 
 let tiers = fs.readFileSync('data/tiers.json')
 tiers = JSON.parse(tiers)
@@ -25,7 +24,7 @@ async function match (message, username, user, tag, matchno) {
             if (check === matchno - 1) {
               if (game.metadata.mode !== 'Competitive' && game.metadata.mode !== 'Deathmatch') {
                 if (game.metadata.rounds_played === 1) {
-                  message.reply('Custom Deathmatch data feature will come soon!')
+                  message.channel.send('Custom Deathmatch data feature will come soon!')
                   break
                 }
                 let setColor
@@ -63,7 +62,7 @@ async function match (message, username, user, tag, matchno) {
 ║ ${(game.players.red[3].character).padEnd(9)} ║ ${(game.players.red[3].stats.kills + '/' + game.players.red[3].stats.deaths + '/' + game.players.red[3].stats.assists).padEnd(8)} ║ ${(game.players.blue[3].character).padEnd(9)} ║ ${(game.players.blue[3].stats.kills + '/' + game.players.blue[3].stats.deaths + '/' + game.players.blue[3].stats.assists).padEnd(8)} ║
 ║ ${(game.players.red[4].character).padEnd(9)} ║ ${(game.players.red[4].stats.kills + '/' + game.players.red[4].stats.deaths + '/' + game.players.red[4].stats.assists).padEnd(8)} ║ ${(game.players.blue[4].character).padEnd(9)} ║ ${(game.players.blue[4].stats.kills + '/' + game.players.blue[4].stats.deaths + '/' + game.players.blue[4].stats.assists).padEnd(8)} ║
 ╚═══════════╩══════════╩═══════════╩══════════╝`
-              // message.reply(rr)
+              // message.channel.send(rr)
                 const compgameEmbed = new MessageEmbed()
                   .setColor(setColor)
                   .setTitle(username)
@@ -75,7 +74,7 @@ async function match (message, username, user, tag, matchno) {
                   .addField('Red Team' + teamwin[0], red, true)
                   .addField('Blue Team' + teamwin[1], blue, true)
                   .addField('ScoreBoard [' + game.teams.red.rounds_won + '-' + game.teams.blue.rounds_won + ']', '```' + sb + '```')
-                message.reply({ embeds: [compgameEmbed] })
+                message.channel.send(compgameEmbed)
                 return
               } else if (game.metadata.mode === 'Competitive') {
                 let setColor
@@ -113,7 +112,7 @@ async function match (message, username, user, tag, matchno) {
 ║ ${(game.players.red[3].character).padEnd(9)} ║ ${(game.players.red[3].stats.kills + '/' + game.players.red[3].stats.deaths + '/' + game.players.red[3].stats.assists).padEnd(8)} ║ ${(game.players.blue[3].character).padEnd(9)} ║ ${(game.players.blue[3].stats.kills + '/' + game.players.blue[3].stats.deaths + '/' + game.players.blue[3].stats.assists).padEnd(8)} ║
 ║ ${(game.players.red[4].character).padEnd(9)} ║ ${(game.players.red[4].stats.kills + '/' + game.players.red[4].stats.deaths + '/' + game.players.red[4].stats.assists).padEnd(8)} ║ ${(game.players.blue[4].character).padEnd(9)} ║ ${(game.players.blue[4].stats.kills + '/' + game.players.blue[4].stats.deaths + '/' + game.players.blue[4].stats.assists).padEnd(8)} ║
 ╚═══════════╩══════════╩═══════════╩══════════╝`
-              // message.reply(rr)
+              // message.channel.send(rr)
                 const compgameEmbed = new MessageEmbed()
                   .setColor(setColor)
                   .setTitle(username)
@@ -125,10 +124,10 @@ async function match (message, username, user, tag, matchno) {
                   .addField('Red Team' + teamwin[0], red, true)
                   .addField('Blue Team' + teamwin[1], blue, true)
                   .addField('ScoreBoard [' + game.teams.red.rounds_won + '-' + game.teams.blue.rounds_won + ']', '```' + sb + '```')
-                message.reply({ embeds: [compgameEmbed] })
+                message.channel.send(compgameEmbed)
                 return
               } else {
-                message.reply('Deathmatch data feature will come soon!')
+                message.channel.send('Deathmatch data feature will come soon!')
               }
             }
             check++
@@ -142,9 +141,9 @@ async function match (message, username, user, tag, matchno) {
   if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
-      message.reply('The User has to many incoming Friend Invites, can not get puuid!')
+      message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
     } else {
-      message.reply('User not found!\nTry again if you feel there is an error!')
+      message.channel.send('User not found!\nTry again if you feel there is an error!')
     }
   }
 }

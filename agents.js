@@ -1,7 +1,5 @@
-// File Read Module
 const fs = require('fs')
 
-// Discord Js Modules
 const { MessageEmbed } = require('discord.js')
 
 let agents = fs.readFileSync('data/agents.json')
@@ -26,8 +24,8 @@ function info (message, number) {
   // const agentPhotoEmbed = new MessageEmbed()
   //     .setColor('#ffffff')
   //     .setImage(agents.agent[number].fullPortrait);
-  message.reply({ embeds: [agentEmbed] })
-  // message.reply(agentPhotoEmbed);
+  message.channel.send(agentEmbed)
+  // message.channel.send(agentPhotoEmbed);
 }
 
 module.exports = { info }

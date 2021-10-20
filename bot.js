@@ -1,25 +1,22 @@
-// Config
 require('dotenv').config()
-
-// Files
 const rank = require('./rank.js')
 const agent = require('./agents.js')
 const { matches } = require('./matches')
-const { match } = require('./match.js')
-
-// PREFIX
+const { match } = require('./match')
 const PREFIX = '?'
 
-// Discord Js Modules
-const { Client, Intents, MessageEmbed, MessageButton, MessageActionRow } = require('discord.js')
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES], artials: ['MESSAGE', 'REACTION'] })
+const { MessageButton } = require('discord-buttons')
+const { Client, MessageEmbed } = require('discord.js')
+const client = new Client({ partials: ['MESSAGE', 'REACTION'] })
+
+require('discord-buttons')(client)
 
 client.on('ready', () => {
   console.log(`${client.user.tag} has logged in`)
   client.user.setActivity(`in ${client.guilds.cache.size} Servers | ?help`, { type: 'PLAYING' })
 })
 
-client.on('messageCreate', async (message) => {
+client.on('message', async (message) => {
   let msg
   if (message.author.bot) return
   console.log(`[${message.author.tag}]: ${message.content}`)
@@ -40,16 +37,14 @@ client.on('messageCreate', async (message) => {
     }
     switch (code) {
       case 'help': {
-        const row = new MessageActionRow().addComponents(
-          new MessageButton()
-            .setStyle('LINK')
-            .setLabel('Github')
-            .setURL('https://github.com/Sid1512/valorant-bot'),
-          new MessageButton()
-            .setStyle('LINK')
-            .setLabel('Invite Link')
-            .setURL('https://discord.com/api/oauth2/authorize?client_id=856456488372535316&permissions=330752&scope=bot')
-        )
+        const github = new MessageButton()
+          .setStyle('url')
+          .setLabel('Github')
+          .setURL('https://github.com/Sid1512/valorant-bot')
+        const invite = new MessageButton()
+          .setStyle('url')
+          .setLabel('Invite Link')
+          .setURL('https://discord.com/api/oauth2/authorize?client_id=856456488372535316&permissions=330752&scope=bot')
         const helpEmbed = new MessageEmbed()
           .setColor('#ffffff')
           .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
@@ -62,7 +57,10 @@ client.on('messageCreate', async (message) => {
           .addField('?agent', 'Show agent information.\nFormat: ?agent number')
           .addField('\u200B\nSupport me by', 'Recommend it to others using the invite link! :heart:\nStar my project on github and follow me! :star: :heart:')
           .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
-        message.reply({ embeds: [helpEmbed], components: [row] })
+        message.channel.send({
+          buttons: [github, invite],
+          embed: helpEmbed
+        })
         break
       }
       case 'rank': {
@@ -81,13 +79,29 @@ client.on('messageCreate', async (message) => {
         rank.stats(message, code, username, user, tag)
         break
       }
+      case 'agents': {
+        const agentsEmbed = new MessageEmbed()
+          .setColor('#ffffff')
+          .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
+          .addField('Agent List', '1. Astra <:astra:864480515763339274>\n2. Breach <:breach:864480515711959051>\n3. Brimstone <:brimstone:864480515397779456>\n4. Cypher <:cypher:864480515864002610>\n5. Jett <:jett:864480515699638293>\n6. KAY/O <:kayo:864480516271243285>\n7. Killjoy <:killjoy:864480515594780692>\n8. Omen <:omen:864480516018143282>\n9. Phoenix <:phoenix:864480515015704606>\n10. Raze <:raze:864480516644274207>\n11. Reyna <:reyna:864480515780378644>\n12. Sage <:sage:864480516069261332>\n13. Skye <:skye:864480516719640596>\n14. Sova <:sova:864480515707895858>\n15. Viper <:viper:864480515809738773>\n16. Yoru <:yoru:864480515175743509>')
+        message.channel.send(agentsEmbed)
+        break
+      }
+      case 'agent': {
+        const number = msg
+        if (number > 0 && number < 17) {
+          agent.info(message, number - 1)
+        } else {
+          message.channel.send('Enter valid agent number!')
+        }
+        break
+      }
       case 'matches': {
         const username = msg
         const [user, tag] = encodeURI(username).split('#')
         console.log(user, tag)
         console.log(msg)
         matches(message, username, user, tag)
-        // matches(client, message, username, user, tag)
         break
       }
       case 'match': {
@@ -96,23 +110,6 @@ client.on('messageCreate', async (message) => {
         console.log(user, tag)
         console.log(msg)
         match(message, username, user, tag, matchno)
-        break
-      }
-      case 'agents': {
-        const agentsEmbed = new MessageEmbed()
-          .setColor('#ffffff')
-          .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
-          .addField('Agent List', '1. Astra <:astra:864480515763339274>\n2. Breach <:breach:864480515711959051>\n3. Brimstone <:brimstone:864480515397779456>\n4. Cypher <:cypher:864480515864002610>\n5. Jett <:jett:864480515699638293>\n6. KAY/O <:kayo:864480516271243285>\n7. Killjoy <:killjoy:864480515594780692>\n8. Omen <:omen:864480516018143282>\n9. Phoenix <:phoenix:864480515015704606>\n10. Raze <:raze:864480516644274207>\n11. Reyna <:reyna:864480515780378644>\n12. Sage <:sage:864480516069261332>\n13. Skye <:skye:864480516719640596>\n14. Sova <:sova:864480515707895858>\n15. Viper <:viper:864480515809738773>\n16. Yoru <:yoru:864480515175743509>')
-        message.reply({ embeds: [agentsEmbed] })
-        break
-      }
-      case 'agent': {
-        const number = msg
-        if (number > 0 && number < 17) {
-          agent.info(message, number - 1)
-        } else {
-          message.reply('Enter valid agent number!')
-        }
         break
       }
     }
