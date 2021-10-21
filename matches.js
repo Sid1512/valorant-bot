@@ -1,5 +1,7 @@
+// API Fetch Module
 const fetch = require('node-fetch')
 
+// Discord Js Modules
 const { MessageEmbed } = require('discord.js')
 
 const region = ['ap', 'eu', 'na', 'kr']
@@ -28,7 +30,7 @@ async function matches (message, username, user, tag) {
             .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
             .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
             .addField('Last 10 Matches', gamemodes)
-          message.channel.send(matches)
+          message.reply({ embeds: [matches] })
         })
       } else {
         errorMessage = res.status
@@ -38,9 +40,9 @@ async function matches (message, username, user, tag) {
   if (check < 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
-      message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
+      message.reply('The User has to many incoming Friend Invites, can not get puuid!')
     } else {
-      message.channel.send('User not found!\nTry again if you feel there is an error!')
+      message.reply('User not found!\nTry again if you feel there is an error!')
     }
   }
 }

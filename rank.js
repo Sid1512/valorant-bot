@@ -1,10 +1,11 @@
+// API Fetch Module
 const fetch = require('node-fetch')
 
+// File Read Module
 const fs = require('fs')
 
-const {
-  MessageEmbed
-} = require('discord.js')
+// Discord Js Modules
+const { MessageEmbed } = require('discord.js')
 
 let tiers = fs.readFileSync('data/tiers.json')
 tiers = JSON.parse(tiers)
@@ -43,10 +44,10 @@ async function stats (message, code, username, user, tag) {
                 .setThumbnail(tiers.tier[playerData.current_data.currenttier].smallIcon)
                 .addField('Current Rank', tiers.tier[playerData.current_data.currenttier].tierName)
                 .addField('MMR', playerData.current_data.ranking_in_tier + rankmmr, true)
-                .addField('ELO', playerData.current_data.elo, true)
+                .addField('ELO', playerData.current_data.elo.toString(), true)
                 .addField('Last Game MMR Change', rankemo + playerData.current_data.mmr_change_to_last_game, true)
                 .setFooter('Bot by CodeHacker#9133', 'https://imgur.com/7av0vkX.png')
-              message.channel.send(rankEmbed)
+              message.reply({ embeds: [rankEmbed] })
             } else {
               season.forEach(seas => {
                 const index = season.indexOf(seas)
@@ -58,11 +59,11 @@ async function stats (message, code, username, user, tag) {
                     .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
                     .setThumbnail(tiers.tier[rank].smallIcon)
                     .setDescription(seasonfull[index])
-                    .addField('Wins', playerData.by_season[seas].wins)
-                    .addField('Total Games', playerData.by_season[seas].number_of_games)
+                    .addField('Wins', playerData.by_season[seas].wins.toString())
+                    .addField('Total Games', playerData.by_season[seas].number_of_games.toString())
                     .addField('Rank before Act End', playerData.by_season[seas].final_rank_patched)
                     .addField('Act Rank', playerData.by_season[seas].act_rank_wins[0].patched_tier)
-                  message.channel.send(rankprevEmbed)
+                  message.reply({ embeds: [rankprevEmbed] })
                 }
               })
             }
@@ -76,9 +77,9 @@ async function stats (message, code, username, user, tag) {
   if (check !== 0) {
     console.log(errorMessage)
     if (errorMessage === 409) {
-      message.channel.send('The User has to many incoming Friend Invites, can not get puuid!')
+      message.reply({ content: 'The User has to many incoming Friend Invites, can not get puuid!' })
     } else {
-      message.channel.send('User not found!\nTry again if you feel there is an error!')
+      message.reply({ content: 'User not found!\nTry again if you feel there is an error!' })
     }
   }
 }
