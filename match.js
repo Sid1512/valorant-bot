@@ -30,7 +30,11 @@ async function match (message, username, user, tag, matchno) {
                 }
                 let setColor
                 let playerAgentTeam
-                if (game.teams.red.has_won) {
+                if (game.teams.red.has_won === game.teams.blue.has_won) {
+                  setColor = '#ffffff'
+                  teamwin[0] = ' (Draw)'
+                  teamwin[1] = ' (Draw)'
+                } else if (game.teams.red.has_won) {
                   setColor = '#ff0000'
                   teamwin[0] = ' (Winner)'
                 } else {
@@ -80,7 +84,11 @@ async function match (message, username, user, tag, matchno) {
               } else if (game.metadata.mode === 'Competitive') {
                 let setColor
                 let playerAgentTeam
-                if (game.teams.red.has_won) {
+                if (game.teams.red.has_won === game.teams.blue.has_won) {
+                  setColor = '#ffffff'
+                  teamwin[0] = ' (Draw)'
+                  teamwin[1] = ' (Draw)'
+                } else if (game.teams.red.has_won) {
                   setColor = '#ff0000'
                   teamwin[0] = ' (Winner)'
                 } else {
