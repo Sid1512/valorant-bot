@@ -10,8 +10,8 @@ const { MessageEmbed } = require('discord.js')
 let tiers = fs.readFileSync('data/tiers.json')
 tiers = JSON.parse(tiers)
 
-const season = ['e2a3', 'e2a2', 'e2a1', 'e1a3', 'e1a2', 'e1a1']
-const seasonfull = ['Episode 2 Act 3', 'Episode 2 Act 2', 'Episode 2 Act 1', 'Episode 1 Act 3', 'Episode 1 Act 2', 'Episode 1 Act 1']
+const season = ['e3a2', 'e3a1', 'e2a3', 'e2a2', 'e2a1', 'e1a3', 'e1a2', 'e1a1']
+const seasonfull = ['Episode 3 Act 2', 'Episode 3 Act 1', 'Episode 2 Act 3', 'Episode 2 Act 2', 'Episode 2 Act 1', 'Episode 1 Act 3', 'Episode 1 Act 2', 'Episode 1 Act 1']
 const region = ['ap', 'eu', 'na', 'kr']
 
 async function stats (message, code, username, user, tag) {
