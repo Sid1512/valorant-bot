@@ -3,7 +3,7 @@ require('dotenv').config()
 
 // Files
 const rank = require('./rank.js')
-const ranks = require('./ranks.js')
+// const ranks = require('./ranks.js')
 const agent = require('./agents.js')
 const { matches } = require('./matches')
 const { match } = require('./match.js')
@@ -71,7 +71,7 @@ client.on('messageCreate', async (message) => {
         const [user, tag] = encodeURI(username).split('#')
         console.log(user, tag)
         console.log(msg)
-        ranks.stats(message, code, username, user, tag)
+        rank.stats(message, code, username, user, tag)
         break
       }
       case 'rankprev': {
