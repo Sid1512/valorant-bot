@@ -1,6 +1,5 @@
-//folders
-node_modules
-test
+// folders
+// node_modules
 
 //files
 .env
