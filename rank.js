@@ -18,7 +18,6 @@ async function stats (message, code, username, user, tag) {
   let check = -1
   let errorMessage
   for (const r of region) {
-    console.log('https://api.henrikdev.xyz/valorant/v2/mmr/' + r + '/' + user + '/' + tag + '?filter=')
     await fetch('https://api.henrikdev.xyz/valorant/v2/mmr/' + r + '/' + user + '/' + tag + '?filter=').then(res => {
       if (res.status === 200) {
         res.json().then(json => {
