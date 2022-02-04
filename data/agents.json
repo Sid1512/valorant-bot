@@ -119,6 +119,43 @@
       ]
     },
     {
+      "id": "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",
+      "name": "Chamber",
+      "api_name": "Deadeye",
+      "gender": ":male_sign: Male",
+      "origin": ":flag_fr: France",
+      "role": "<:sentinel:863476736675151893> Sentinel",
+      "bio": "Well dressed and well armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.",
+      "avatar": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
+      "bustPortrait": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/bustportrait.png",
+      "abilities": [
+        {
+          "slot": "Ability1",
+          "displayName": "Headhunter",
+          "description": "ACTIVATE to equip a heavy pistol. ALT FIRE with the pistol equipped to aim down sights.",
+          "displayIcon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability1/displayicon.png"
+        },
+        {
+          "slot": "Ability2",
+          "displayName": "Rendezvous",
+          "description": "PLACE two teleport anchors. While on the ground and in range of an anchor, REACTIVATE to quickly teleport to the other anchor.  Anchors can be picked up to be REDEPLOYED.",
+          "displayIcon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ability2/displayicon.png"
+        },
+        {
+          "slot": "Grenade",
+          "displayName": "Trademark",
+          "description": "PLACE a trap that scans for enemies. When a visible enemy comes in range, the trap counts down and then destabilizes the terrain around them , creating a lingering field that slows players caught inside of it.",
+          "displayIcon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/grenade/displayicon.png"
+        },
+        {
+          "slot": "Ultimate",
+          "displayName": "Tour De Force",
+          "description": "ACTIVATE to summon a powerful, custom sniper rifle that will kill an enemy with any direct hit.  Killing an enemy creates a lingering field that slows players caught inside of it.",
+          "displayIcon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/abilities/ultimate/displayicon.png"
+        }
+      ]
+    },
+    {
       "id": "117ED9E3-49F3-6512-3CCF-0CADA7E3823B",
       "name": "Cypher",
       "api_name": "Gumshoe",
@@ -263,6 +300,42 @@
           "displayName": "Lockdown",
           "description": "EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.",
           "displayIcon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/abilities/ultimate/displayicon.png"
+        }
+      ]
+    },{
+      "id": "bb2a4828-46eb-8cd1-e765-15848195d751",
+      "name": "Neon",
+      "api_name": "Sprinter",
+      "gender": ":female_sign: Female",
+      "origin": ":flag_ph: Philippines",
+      "role": "<:duelist:863476736947650590> Duelist",
+      "bio": "Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it. She races ahead to catch enemies off guard then strikes them down quicker than lightning.",
+      "avatar": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png",
+      "bustPortrait": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/bustportrait.png",
+      "abilities": [
+        {
+          "slot": "Ability1",
+          "displayName": "Relay Bolt",
+          "description": "INSTANTLY throw an energy bolt that bounces once. Upon hitting each surface, the bolt electrifies the ground below with a concussive blast.",
+          "displayIcon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability1/displayicon.png"
+        },
+        {
+          "slot": "Ability2",
+          "displayName": "High Gear",
+          "description": "INSTANTLY channel Neon’s power for increased speed. When charged, ALT FIRE to trigger an electric slide. Slide charge resets every two kills.",
+          "displayIcon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ability2/displayicon.png"
+        },
+        {
+          "slot": "Grenade",
+          "displayName": "Fast Lane",
+          "description": "FIRE two energy lines forward on the ground that extend a short distance or until they hit a surface. The lines rise into walls of static electricity that block vision and damage enemies passing through them. ",
+          "displayIcon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/grenade/displayicon.png"
+        },
+        {
+          "slot": "Ultimate",
+          "displayName": "Overdrive",
+          "description": "Unleash Neon’s full power and speed for a short duration. FIRE to channel the power into a deadly lightning beam with high movement accuracy.",
+          "displayIcon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/abilities/ultimate/displayicon.png"
         }
       ]
     },

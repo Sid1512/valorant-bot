@@ -25,7 +25,7 @@ async function match (message, username, user, tag, matchno) {
             if (check === matchno - 1) {
               if (game.metadata.mode !== 'Competitive' && game.metadata.mode !== 'Deathmatch') {
                 if (game.metadata.rounds_played === 1) {
-                  message.reply('Custom Deathmatch data feature will come soon!')
+                  message.reply('Escalation/Custom Deathmatch data feature will come soon!')
                   break
                 }
                 let setColor
@@ -45,6 +45,9 @@ async function match (message, username, user, tag, matchno) {
                   if (decodeURI((player.name + player.tag).toLowerCase()) === decodeURI((user + tag).toLowerCase())) {
                     playerAgentTeam = player.team + ' & ' + player.character
                     break
+                  }
+                  if (playerAgentTeam === undefined) {
+                    playerAgentTeam = 'Unknown'
                   }
                 }
                 const red = `${game.players.red[0].name + '#' + game.players.red[0].tag + ' **[' + game.players.red[0].character + ']**'}

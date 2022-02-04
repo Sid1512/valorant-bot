@@ -103,7 +103,7 @@ client.on('messageCreate', async (message) => {
         const agentsEmbed = new MessageEmbed()
           .setColor('#ffffff')
           .setAuthor('Val Bot', 'https://imgur.com/7av0vkX.png')
-          .addField('Agent List', '1. Astra <:astra:864480515763339274>\n2. Breach <:breach:864480515711959051>\n3. Brimstone <:brimstone:864480515397779456>\n4. Cypher <:cypher:864480515864002610>\n5. Jett <:jett:864480515699638293>\n6. KAY/O <:kayo:864480516271243285>\n7. Killjoy <:killjoy:864480515594780692>\n8. Omen <:omen:864480516018143282>\n9. Phoenix <:phoenix:864480515015704606>\n10. Raze <:raze:864480516644274207>\n11. Reyna <:reyna:864480515780378644>\n12. Sage <:sage:864480516069261332>\n13. Skye <:skye:864480516719640596>\n14. Sova <:sova:864480515707895858>\n15. Viper <:viper:864480515809738773>\n16. Yoru <:yoru:864480515175743509>')
+          .addField('Agent List', '1. Astra <:astra:864480515763339274>\n2. Breach <:breach:864480515711959051>\n3. Brimstone <:brimstone:864480515397779456>\n4. Chamber <:chamber:939226377608134706>\n5. Cypher <:cypher:864480515864002610>\n6. Jett <:jett:864480515699638293>\n7. KAY/O <:kayo:864480516271243285>\n8. Killjoy <:killjoy:864480515594780692>\n9. Neon <:neon:939226377406799912>\n10. Omen <:omen:864480516018143282>\n11. Phoenix <:phoenix:864480515015704606>\n12. Raze <:raze:864480516644274207>\n13. Reyna <:reyna:864480515780378644>\n14. Sage <:sage:864480516069261332>\n15. Skye <:skye:864480516719640596>\n16. Sova <:sova:864480515707895858>\n17. Viper <:viper:864480515809738773>\n18. Yoru <:yoru:864480515175743509>')
         message.reply({ embeds: [agentsEmbed] })
         break
       }
