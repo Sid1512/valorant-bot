@@ -2,7 +2,8 @@
 
 Unofficial Valorant Bot currently used to show player rank data. <br />
 API used in this bot is by [@Henrik-3](https://github.com/Henrik-3/unofficial-valorant-api). <br />
-Discord Invite: https://discord.com/api/oauth2/authorize?client_id=856456488372535316&permissions=330752&scope=bot
+[Discord Invite](https://discord.com/oauth2/authorize?client_id=856456488372535316&permissions=274878155840&scope=bot) <br />
+[Terms & Conditions](https://bit.ly/3EDK13N) || [Privacy Policy](https://bit.ly/3EEPZRC) <br />
 
 # Commands
 
