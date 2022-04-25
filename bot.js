@@ -112,7 +112,7 @@ client.on('messageCreate', async (message) => {
         if (number > 0 && number < 17) {
           agent.info(message, number - 1)
         } else {
-          message.reply('Enter valid agent number!')
+          message.reply('Enter valid agent number!!')
         }
         break
       }
