@@ -10,11 +10,11 @@ const { MessageEmbed } = require('discord.js')
 let tiers = fs.readFileSync('data/tiers.json')
 tiers = JSON.parse(tiers)
 
-const season = ['e4a3','e4a2','e4a1','e3a3','e3a2', 'e3a1', 'e2a3', 'e2a2', 'e2a1', 'e1a3', 'e1a2', 'e1a1']
-const seasonfull = ['Episode 4 Act 3','Episode 4 Act 2', 'Episode 4 Act 1','Episode 3 Act 3','Episode 3 Act 2', 'Episode 3 Act 1', 'Episode 2 Act 3', 'Episode 2 Act 2', 'Episode 2 Act 1', 'Episode 1 Act 3', 'Episode 1 Act 2', 'Episode 1 Act 1']
+const season = ['e4a3', 'e4a2', 'e4a1', 'e3a3', 'e3a2', 'e3a1', 'e2a3', 'e2a2', 'e2a1', 'e1a3', 'e1a2', 'e1a1']
+const seasonfull = ['Episode 4 Act 3', 'Episode 4 Act 2', 'Episode 4 Act 1', 'Episode 3 Act 3', 'Episode 3 Act 2', 'Episode 3 Act 1', 'Episode 2 Act 3', 'Episode 2 Act 2', 'Episode 2 Act 1', 'Episode 1 Act 3', 'Episode 1 Act 2', 'Episode 1 Act 1']
 const region = ['ap', 'eu', 'na', 'kr']
 
-async function stats (message, code, username, user, tag) {
+async function stats(message, code, username, user, tag) {
   let check = -1
   let errorMessage
   for (const r of region) {
@@ -31,8 +31,8 @@ async function stats (message, code, username, user, tag) {
               rankemo = tiers.tier[playerData.current_data.currenttier].rankup + ' +'
             }
             let rankmmr
-            if (playerData.current_data.currenttier > 20 && playerData.current_data.currenttier < 24) {
-              rankmmr = '/300'
+            if (playerData.current_data.currenttier > 23) {
+              rankmmr = ''
             } else {
               rankmmr = '/100'
             }
