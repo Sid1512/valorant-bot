@@ -109,7 +109,7 @@ client.on('messageCreate', async (message) => {
       }
       case 'agent': {
         const number = msg
-        if (number > 0 && number < 17) {
+        if (number > 0 && number < 19) {
           agent.info(message, number - 1)
         } else {
           message.reply('Enter valid agent number!!')
